@@ -2945,7 +2945,7 @@ static swig_module_info swig_module = {swig_types, 1, 0, 0, 0, 0};
 
 
     #include <Python.h>
-    #include "numpy/arrayobject.h"
+    #include "/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/arrayobject.h"
     void compress_layer_weights(PyObject *pComprsLabel, PyObject *pCodeBook, PyObject *pWeights, int nWeight, int nBit);
     void decompress_layer_weights(PyObject *pWeights, PyObject *pComprsLabel, PyObject *pCodeBook, int nWeight, int nBit);
     void quantize_layer_weights(PyObject *pWeights, int nWeight, int nBit);
