@@ -19,7 +19,7 @@ def caffe_model_compress(model, weights, storefile, convbit=6, fcbit=2, use_save
 	
 	for item in net.params.items():
 		name, layer = item
-		print "compressing layer", name
+		print("compressing layer", name)
 		
 		#compress weights
 		weights = net.params[name][0].data
@@ -58,7 +58,7 @@ def caffe_model_decompress(model, weights, loadfile):
 	net = caffe.Net(model, caffe.TEST);
 	cmpr_model = np.load(loadfile)
 	
-	print cmpr_model.files
+	print(cmpr_model.files)
 	
 	version, convbit, fcbit = cmpr_model['compz_info']
 	
@@ -97,4 +97,4 @@ if __name__ == "__main__":
 
 	#caffe_model_decompress(netmodel, "alexnet_xx.caffemodel", "alexnetzip.npz")
 	
-	print "Done"
+	print("Done")
