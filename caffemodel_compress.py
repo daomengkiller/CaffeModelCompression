@@ -89,12 +89,12 @@ def caffe_model_decompress(model, weights, loadfile):
 	net.save(weights)
 
 if __name__ == "__main__":
-	ALEXNET_PATH = "/home/junyi/caffe/models/bvlc_alexnet"
-	netmodel   = os.path.join(ALEXNET_PATH, "deploy.prototxt") 
-	netweights = os.path.join(ALEXNET_PATH, "bvlc_alexnet.caffemodel")
-	output = "alexnetzip"
+	ALEXNET_PATH = "/content/"
+	netmodel   = os.path.join(ALEXNET_PATH, "TestModel.prototxt") 
+	netweights = os.path.join(ALEXNET_PATH, "TestModel.caffemodel")
+	output = "testzip"
 	caffe_model_compress(netmodel, netweights, output, 6, 2)
 
-	caffe_model_decompress(netmodel, "alexnet_xx.caffemodel", "alexnetzip.npz")
+	#caffe_model_decompress(netmodel, "alexnet_xx.caffemodel", "alexnetzip.npz")
 	
 	print "Done"
