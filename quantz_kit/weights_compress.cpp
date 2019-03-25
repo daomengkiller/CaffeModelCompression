@@ -5,7 +5,7 @@
 #include <limits>
 #include <sys/time.h>
 #include <Python.h>
-#include "numpy/arrayobject.h"
+#include "/usr/local/lib/python2.7/dist-packages/numpy/core/include/numpy/arrayobject.h"
 #include <omp.h>
 //#include "KmDriver.h"
 
